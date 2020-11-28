@@ -1,0 +1,152 @@
+html { box-sizing: border-box; 
+}
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 400;
+    line-height: 1.5;
+}
+
+header{
+    background-image: linear-gradient(270deg, #aa5477,  #25133d 75%);
+    color: #e5e5e5;
+    padding: 2rem;
+}
+
+header a {
+    border: 0.1rem solid #e5e5e5;
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 700;
+
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    flex: 1 0 50%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+nav li:first-child a {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color:#e5e5e5;
+    background-color: #48418e;
+} 
+a {
+    text-decoration: none;
+    color:#48418e;
+    display: flex;
+    justify-content: center;
+}
+
+a.stahnout {
+    background-color: #48418e;
+    color: #e5e5e5;
+    margin-bottom: 1rem;
+}
+
+a.info {
+    color: #e5e5e5;
+}
+
+a.stahnout:hover {
+    border: 0.1rem solid #48418e;
+    background-color: #25133d;
+}
+
+a.info:hover {
+    border: 0.1rem solid #48418e;
+    background-color: #48418e;
+}
+
+main {
+    padding: 2rem;
+    justify-content: center;
+}
+.sluzby {
+    align-items: center;
+    text-align: center;
+    color:#48418e;
+}
+footer {
+    background-color: #48418e;
+    text-align: center;
+    color: #e5e5e5;
+}
+
+/*-------- TABLETY ---------*/
+@media (min-width: 480px){
+    ul {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    nav li {
+        flex: 1;
+    }
+
+    header a {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+   a.stahnout {
+       display: inline-block;
+       padding-left: 1.5rem;
+       padding-right: 1.5rem;
+   }
+
+   a.info {
+       display: inline-block;
+       padding-left: 1.5rem;
+       padding-right: 1.5rem;
+   }
+
+   .sluzby {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+}
+
+    .sluzby-nazev {
+        flex-basis: calc(100%/3 - 2rem);
+}
+
+}
+
+/*-------- PC ---------*/
+@media (min-width: 768px) {
+    header {
+        background-image: url(images/telefon.png), linear-gradient(270deg, #aa5477,  #25133d 75%);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+
+    }
+
+}
